@@ -1,0 +1,7 @@
+'*.{js,ts}':
+  - yarn lint:typecheck:staged
+  - eslint --fix
+  - prettier --write
+'*.{json,yml,md}':
+  - yarn lint:typecheck:staged
+  - prettier --write
