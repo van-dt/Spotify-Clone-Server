@@ -1,9 +1,9 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="#">
-    <img src=".github/images/logo.png" alt="Logo" width="80" height="80">
-  </a>
+  <p align="center">
+    <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
+  </p>
 
   <h3 align="center">Spotify-clone-API-V1</h3>
 
