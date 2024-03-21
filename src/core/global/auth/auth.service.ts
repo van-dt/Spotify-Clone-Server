@@ -35,6 +35,7 @@ export class AuthService {
         password: true,
         fullName: true,
         avatarUrl: true,
+        role: true,
       },
     });
 
@@ -60,13 +61,13 @@ export class AuthService {
       uid: accountExist.id,
       eml: accountExist.email,
       per: [],
+      rol: accountExist.role,
     };
 
     const { password: userPass, ...userData } = accountExist;
 
     const token = await this.returnResponseAuth(payload);
     return {
-      user: userData,
       token,
     };
   }
@@ -108,6 +109,7 @@ export class AuthService {
         email: true,
         fullName: true,
         avatarUrl: true,
+        role: true,
       },
     });
 
@@ -115,11 +117,11 @@ export class AuthService {
       uid: user.id,
       eml: user.email,
       per: [],
+      rol: user.role,
     };
 
     const token = await this.returnResponseAuth(payload);
     return {
-      user: user,
       token,
     };
   }

@@ -23,8 +23,8 @@ model User {
   fullName   String      @map("full_name")
   avatarUrl  String?     @map("avatar_url")
   password   String
-  songs      Song[]
   role       Role        @default(USER)
+  songs      Song[]
   likedSongs LikedSong[]
 
   @@map("user")

@@ -34,6 +34,7 @@ import { WebhookModule } from '@modules/webhook/webhook.module';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { AuthModule } from './core/global/auth/auth.module';
+import { UsersModule } from './users/users.module';
 
 @Module({
   imports: [
@@ -62,6 +63,7 @@ import { AuthModule } from './core/global/auth/auth.module';
     ExampleModule,
     // my app
     AuthModule,
+    UsersModule,
   ],
   controllers: [AppController],
   providers: [
