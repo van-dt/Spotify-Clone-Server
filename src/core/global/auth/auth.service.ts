@@ -7,8 +7,6 @@ import { VSignUpDto } from '@core/global/auth/dto/systemSignUp.dto';
 import { PrismaService } from '@core/global/prisma/prisma.service';
 import { handleBCRYPTCompare, handleBCRYPTHash } from '@helper/utils';
 
-// import { IResponseAuth } from './interface';
-
 @Injectable()
 export class AuthService {
   private readonly logger = new Logger('AuthService');
@@ -63,8 +61,6 @@ export class AuthService {
       per: [],
       rol: accountExist.role,
     };
-
-    const { password: userPass, ...userData } = accountExist;
 
     const token = await this.returnResponseAuth(payload);
     return {

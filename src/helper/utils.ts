@@ -36,9 +36,17 @@ export function getWinstonPathFile() {
 }
 
 export const imageFileFilter = (req, file, callback) => {
-  if (
-    !file.originalname.match(/\.(jpg|jpeg|png|gif|heic|mp3|docs|docx|pdf)$/)
-  ) {
+  if (!file.originalname.match(/\.(jpg|jpeg|png|gif)$/)) {
+    return callback(
+      new HttpException(ErrorMessage.ONLY_IMAGE, HttpStatus.BAD_REQUEST),
+      false,
+    );
+  }
+  callback(null, true);
+};
+
+export const audioFileFilter = (req, file, callback) => {
+  if (!file.originalname.match(/\.(mp3|wav)$/)) {
     return callback(
       new HttpException(ErrorMessage.ONLY_IMAGE, HttpStatus.BAD_REQUEST),
       false,
@@ -58,7 +66,6 @@ export const allFileFilter = (req, file, callback) => {
 };
 
 export const editFileName = (req, file, callback) => {
-  // const name = file.originalname.split('.')[0];
   const fileExtName = extname(file.originalname);
   const randomName = Array(4)
     .fill(null)
@@ -152,7 +159,7 @@ export function generateCode(size?: number) {
   const chars =
     'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
   let inviteCode = '';
-  for (let i = 0; i < (size ? size : 8); i++) {
+  for (let i = 0; i < (size ?? 8); i++) {
     const randomIndex = Math.floor(Math.random() * chars.length);
     inviteCode += chars[randomIndex];
   }

@@ -8,6 +8,7 @@ import {
 } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { APP_FILTER, APP_GUARD, APP_INTERCEPTOR, APP_PIPE } from '@nestjs/core';
+import { MulterModule } from '@nestjs/platform-express';
 import { TerminusModule } from '@nestjs/terminus';
 import { ThrottlerGuard, ThrottlerModule } from '@nestjs/throttler';
 
@@ -22,7 +23,6 @@ import { PrismaModule } from '@core/global/prisma/prisma.module';
 // import { QueueProcessorModule } from '@core/global/queueProcessor/queueProcessor.module';
 // import { RedisCacheModule } from '@core/global/redis/redis.module';
 import { SesModule } from '@core/global/ses/ses.module';
-import { UploadModule } from '@core/global/upload/upload.module';
 import { DisableGuard } from '@core/guard/disable.guard';
 import { PostInterceptor, ResponseInterceptor } from '@core/interceptor';
 // import { validate } from '@helper/env.validation';
@@ -34,7 +34,8 @@ import { WebhookModule } from '@modules/webhook/webhook.module';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { AuthModule } from './core/global/auth/auth.module';
-import { UsersModule } from './users/users.module';
+import { UploadModule } from './modules/upload/upload.module';
+import { UsersModule } from './modules/users/users.module';
 
 @Module({
   imports: [
@@ -45,11 +46,13 @@ import { UsersModule } from './users/users.module';
       // TODO: we 'll remove validate env for docker build image + github action smoothly
       // validate,
     }),
+    MulterModule.register({
+      dest: './files',
+    }),
     I18nCustomModule,
     // RedisCacheModule,
     ConstanceModule,
     // QueueModule,
-    UploadModule,
     ThrottlerModule.forRoot({
       ttl: 60,
       limit: 1000,
@@ -64,6 +67,7 @@ import { UsersModule } from './users/users.module';
     // my app
     AuthModule,
     UsersModule,
+    UploadModule,
   ],
   controllers: [AppController],
   providers: [
