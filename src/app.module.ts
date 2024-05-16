@@ -34,6 +34,8 @@ import { WebhookModule } from '@modules/webhook/webhook.module';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { AuthModule } from './core/global/auth/auth.module';
+import { SongLikeModule } from './modules/song-like/song-like.module';
+import { SongsModule } from './modules/songs/songs.module';
 import { UploadModule } from './modules/upload/upload.module';
 import { UsersModule } from './modules/users/users.module';
 
@@ -68,6 +70,8 @@ import { UsersModule } from './modules/users/users.module';
     AuthModule,
     UsersModule,
     UploadModule,
+    SongsModule,
+    SongLikeModule,
   ],
   controllers: [AppController],
   providers: [
