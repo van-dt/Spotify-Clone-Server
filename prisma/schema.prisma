@@ -18,14 +18,18 @@ enum Role {
 
 // model
 model User {
-  id         Int         @id @default(autoincrement())
-  email      String      @unique
-  fullName   String      @map("full_name")
-  avatarUrl  String?     @map("avatar_url")
-  password   String
-  role       Role        @default(USER)
-  songs      Song[]
-  likedSongs LikedSong[]
+  id          Int           @id @default(autoincrement())
+  email       String        @unique
+  fullName    String        @map("full_name")
+  avatarUrl   String?       @map("avatar_url")
+  password    String
+  role        Role          @default(USER)
+  createdAt   DateTime      @default(now()) @map("created_at")
+  updatedAt   DateTime      @default(now()) @map("updated_at")
+  songs       Song[]
+  likedSongs  LikedSong[]
+  playlists   Playlist[]
+  LikedAuthor LikedAuthor[]
 
   @@map("user")
 }
@@ -35,21 +39,73 @@ model Song {
   title      String
   songPath   String      @map("song_path")
   imagePath  String?     @map("image_path")
-  author     String
   user       User        @relation(fields: [userId], references: [id])
   userId     Int         @map("user_id")
+  category   Category    @relation(fields: [categoryId], references: [id])
+  categoryId Int         @map("category_id")
+  author     Author      @relation(fields: [authorId], references: [id])
+  authorId   Int         @map("author_id")
+  playlist   Playlist?   @relation(fields: [playlistId], references: [id])
+  playlistId Int?        @map("playlist_id")
   createdAt  DateTime    @default(now()) @map("created_at")
+  updatedAt  DateTime    @default(now()) @map("updated_at")
   likedUsers LikedSong[]
 
   @@map("song")
 }
 
 model LikedSong {
-  userId Int
+  userId Int  @map("user_id")
   user   User @relation(fields: [userId], references: [id])
-  songId Int
+  songId Int  @map("song_id")
   song   Song @relation(fields: [songId], references: [id])
 
   @@id([userId, songId])
   @@map("liked_song")
+}
+
+model Category {
+  id           Int      @id @default(autoincrement())
+  categoryName String   @unique @map("category_name")
+  image        String?
+  createdAt    DateTime @default(now()) @map("created_at")
+  updatedAt    DateTime @default(now()) @map("updated_at")
+  songs        Song[]
+
+  @@map("category")
+}
+
+model Author {
+  id         Int           @id @default(autoincrement())
+  authorName String        @unique @map("author_name")
+  image      String?
+  createdAt  DateTime      @default(now()) @map("created_at")
+  updatedAt  DateTime      @default(now()) @map("updated_at")
+  songs      Song[]
+  likedUsers LikedAuthor[]
+
+  @@map("author")
+}
+
+model LikedAuthor {
+  userId   Int    @map("user_id")
+  user     User   @relation(fields: [userId], references: [id])
+  authorId Int    @map("author_id")
+  author   Author @relation(fields: [authorId], references: [id])
+
+  @@id([userId, authorId])
+  @@map("liked_author")
+}
+
+model Playlist {
+  id         Int      @id @default(autoincrement())
+  authorName String   @unique @map("author_name")
+  image      String?
+  createdAt  DateTime @default(now()) @map("created_at")
+  updatedAt  DateTime @default(now()) @map("updated_at")
+  songs      Song[]
+  userId     Int
+  user       User     @relation(fields: [userId], references: [id])
+
+  @@map("playlist")
 }

@@ -30,8 +30,18 @@ export class SongsService {
         title: true,
         songPath: true,
         imagePath: true,
-        author: true,
+        author: {
+          select: {
+            authorName: true,
+          },
+        },
+        category: {
+          select: {
+            categoryName: true,
+          },
+        },
         createdAt: true,
+        updatedAt: true,
       },
       where: {
         title: {

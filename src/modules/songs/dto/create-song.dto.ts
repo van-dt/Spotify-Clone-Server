@@ -1,5 +1,11 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { IsNotEmpty, IsOptional, IsString, MaxLength } from 'class-validator';
+import {
+  IsNotEmpty,
+  IsNumber,
+  IsOptional,
+  IsString,
+  MaxLength,
+} from 'class-validator';
 
 import { ErrorMessage } from '../../../core/enum';
 
@@ -21,13 +27,13 @@ export class CreateSongDto {
   @IsOptional()
   imagePath?: string;
 
-  @ApiProperty({ type: String })
-  @IsString()
+  @ApiProperty({ type: Number })
+  @IsNumber()
   @IsNotEmpty()
-  author!: string;
+  authorId!: number;
 
-  // @ApiProperty({ type: Number })
-  // @IsNumber()
-  // @IsNotEmpty()
-  // userId!: number;
+  @ApiProperty({ type: Number })
+  @IsNumber()
+  @IsNotEmpty()
+  categoryId!: number;
 }
