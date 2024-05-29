@@ -16,6 +16,7 @@ export class AuthorService {
         id: true,
         authorName: true,
         image: true,
+        banner: true,
       },
     });
   }
@@ -26,6 +27,7 @@ export class AuthorService {
         id: true,
         authorName: true,
         image: true,
+        banner: true,
         createdAt: true,
         updatedAt: true,
       },
@@ -46,12 +48,18 @@ export class AuthorService {
         id: true,
         authorName: true,
         image: true,
+        banner: true,
         createdAt: true,
         updatedAt: true,
         songs: {
           select: {
             id: true,
             title: true,
+            author: {
+              select: {
+                authorName: true,
+              },
+            },
             songPath: true,
             imagePath: true,
             createdAt: true,

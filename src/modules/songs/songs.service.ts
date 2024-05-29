@@ -11,20 +11,32 @@ export class SongsService {
   constructor(private readonly prisma: PrismaService) {}
 
   async create(createSongDto: CreateSongDto, userId: number) {
-    return await this.prisma.song.create({
-      data: { ...createSongDto, userId },
+    const { categoryIds, ...dataCreate } = createSongDto;
+
+    const song = await this.prisma.song.create({
+      data: { ...dataCreate, userId },
       select: {
         id: true,
         title: true,
         songPath: true,
         imagePath: true,
-        author: true,
       },
     });
+
+    if (categoryIds.length > 0) {
+      await this.prisma.songCategory.createMany({
+        data: categoryIds.map((categoryId) => ({
+          songId: song.id,
+          categoryId,
+        })),
+      });
+    }
+
+    return song;
   }
 
   async findAll(filter: FindAllPostFilterDto) {
-    return await this.prisma.song.findMany({
+    const songs = await this.prisma.song.findMany({
       select: {
         id: true,
         title: true,
@@ -35,9 +47,13 @@ export class SongsService {
             authorName: true,
           },
         },
-        category: {
+        songCategories: {
           select: {
-            categoryName: true,
+            category: {
+              select: {
+                categoryName: true,
+              },
+            },
           },
         },
         createdAt: true,
@@ -52,6 +68,14 @@ export class SongsService {
         createdAt: 'desc',
       },
     });
+
+    return songs.map((song) => {
+      const { songCategories, ...songRes } = song;
+      const categories = songCategories.map(
+        (songCategory) => songCategory.category.categoryName,
+      );
+      return { ...songRes, categories };
+    });
   }
 
   async getSongsByUserId(userId: number) {
@@ -59,8 +83,22 @@ export class SongsService {
       where: {
         id: userId,
       },
-      include: {
-        songs: true,
+      select: {
+        songs: {
+          select: {
+            id: true,
+            title: true,
+            author: {
+              select: {
+                authorName: true,
+              },
+            },
+            songPath: true,
+            imagePath: true,
+            createdAt: true,
+            updatedAt: true,
+          },
+        },
       },
     });
     return user.songs;
@@ -72,7 +110,21 @@ export class SongsService {
         userId,
       },
       select: {
-        song: true,
+        song: {
+          select: {
+            id: true,
+            title: true,
+            author: {
+              select: {
+                authorName: true,
+              },
+            },
+            songPath: true,
+            imagePath: true,
+            createdAt: true,
+            updatedAt: true,
+          },
+        },
       },
     });
 

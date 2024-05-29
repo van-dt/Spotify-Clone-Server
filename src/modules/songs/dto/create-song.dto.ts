@@ -5,6 +5,7 @@ import {
   IsOptional,
   IsString,
   MaxLength,
+  IsArray,
 } from 'class-validator';
 
 import { ErrorMessage } from '../../../core/enum';
@@ -32,8 +33,7 @@ export class CreateSongDto {
   @IsNotEmpty()
   authorId!: number;
 
-  @ApiProperty({ type: Number })
-  @IsNumber()
-  @IsNotEmpty()
-  categoryId!: number;
+  @ApiProperty({ type: [Number] })
+  @IsArray()
+  categoryIds: number[];
 }

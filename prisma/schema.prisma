@@ -35,21 +35,20 @@ model User {
 }
 
 model Song {
-  id         Int         @id @default(autoincrement())
-  title      String
-  songPath   String      @map("song_path")
-  imagePath  String?     @map("image_path")
-  user       User        @relation(fields: [userId], references: [id])
-  userId     Int         @map("user_id")
-  category   Category    @relation(fields: [categoryId], references: [id])
-  categoryId Int         @map("category_id")
-  author     Author      @relation(fields: [authorId], references: [id])
-  authorId   Int         @map("author_id")
-  playlist   Playlist?   @relation(fields: [playlistId], references: [id])
-  playlistId Int?        @map("playlist_id")
-  createdAt  DateTime    @default(now()) @map("created_at")
-  updatedAt  DateTime    @default(now()) @map("updated_at")
-  likedUsers LikedSong[]
+  id             Int            @id @default(autoincrement())
+  title          String
+  songPath       String         @map("song_path")
+  imagePath      String?        @map("image_path")
+  listenCount    Int            @default(0) @map("listen_count")
+  user           User           @relation(fields: [userId], references: [id])
+  userId         Int            @map("user_id")
+  author         Author         @relation(fields: [authorId], references: [id])
+  authorId       Int            @map("author_id")
+  createdAt      DateTime       @default(now()) @map("created_at")
+  updatedAt      DateTime       @default(now()) @map("updated_at")
+  likedUsers     LikedSong[]
+  songCategories SongCategory[]
+  songPlaylists  SongPlaylist[]
 
   @@map("song")
 }
@@ -65,20 +64,32 @@ model LikedSong {
 }
 
 model Category {
-  id           Int      @id @default(autoincrement())
-  categoryName String   @unique @map("category_name")
-  image        String?
-  createdAt    DateTime @default(now()) @map("created_at")
-  updatedAt    DateTime @default(now()) @map("updated_at")
-  songs        Song[]
+  id             Int            @id @default(autoincrement())
+  categoryName   String         @unique @map("category_name")
+  image          String?
+  banner         String?
+  createdAt      DateTime       @default(now()) @map("created_at")
+  updatedAt      DateTime       @default(now()) @map("updated_at")
+  songCategories SongCategory[]
 
   @@map("category")
+}
+
+model SongCategory {
+  songId     Int      @map("song_id")
+  song       Song     @relation(fields: [songId], references: [id])
+  categoryId Int      @map("category_id")
+  category   Category @relation(fields: [categoryId], references: [id])
+
+  @@id([songId, categoryId])
+  @@map("song_category")
 }
 
 model Author {
   id         Int           @id @default(autoincrement())
   authorName String        @unique @map("author_name")
   image      String?
+  banner     String?
   createdAt  DateTime      @default(now()) @map("created_at")
   updatedAt  DateTime      @default(now()) @map("updated_at")
   songs      Song[]
@@ -98,14 +109,25 @@ model LikedAuthor {
 }
 
 model Playlist {
-  id         Int      @id @default(autoincrement())
-  authorName String   @unique @map("author_name")
-  image      String?
-  createdAt  DateTime @default(now()) @map("created_at")
-  updatedAt  DateTime @default(now()) @map("updated_at")
-  songs      Song[]
-  userId     Int
-  user       User     @relation(fields: [userId], references: [id])
+  id            Int            @id @default(autoincrement())
+  playlistName  String         @unique @map("playlist_name")
+  image         String?
+  banner        String?
+  createdAt     DateTime       @default(now()) @map("created_at")
+  updatedAt     DateTime       @default(now()) @map("updated_at")
+  userId        Int
+  user          User           @relation(fields: [userId], references: [id])
+  songPlaylists SongPlaylist[]
 
   @@map("playlist")
+}
+
+model SongPlaylist {
+  songId     Int      @map("song_id")
+  song       Song     @relation(fields: [songId], references: [id])
+  playlistId Int      @map("playlist_id")
+  playlist   Playlist @relation(fields: [playlistId], references: [id])
+
+  @@id([songId, playlistId])
+  @@map("song_playlist")
 }

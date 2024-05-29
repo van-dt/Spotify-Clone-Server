@@ -16,6 +16,7 @@ export class CategoriesService {
         id: true,
         categoryName: true,
         image: true,
+        banner: true,
       },
     });
   }
@@ -26,6 +27,7 @@ export class CategoriesService {
         id: true,
         categoryName: true,
         image: true,
+        banner: true,
         createdAt: true,
         updatedAt: true,
       },
@@ -41,21 +43,26 @@ export class CategoriesService {
   }
 
   async findOne(id: number) {
-    return await this.prisma.category.findFirst({
+    const category = await this.prisma.category.findFirst({
       select: {
         id: true,
         categoryName: true,
         image: true,
+        banner: true,
         createdAt: true,
         updatedAt: true,
-        songs: {
+        songCategories: {
           select: {
-            id: true,
-            title: true,
-            songPath: true,
-            imagePath: true,
-            createdAt: true,
-            updatedAt: true,
+            song: {
+              select: {
+                id: true,
+                title: true,
+                songPath: true,
+                imagePath: true,
+                createdAt: true,
+                updatedAt: true,
+              },
+            },
           },
         },
       },
@@ -66,6 +73,13 @@ export class CategoriesService {
         createdAt: 'desc',
       },
     });
+
+    const { songCategories, ...categoryRes } = category;
+    const songs = songCategories.map((songCategory) => songCategory.song);
+    return {
+      ...categoryRes,
+      songs,
+    };
   }
 
   remove(id: number) {
