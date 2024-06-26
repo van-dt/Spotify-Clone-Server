@@ -3,15 +3,16 @@ import {
   Get,
   Post,
   Body,
-  Patch,
   Param,
   Delete,
+  Put,
 } from '@nestjs/common';
 
 import { Roles, UserData } from '../../core/decorator';
 import { ERole } from '../../core/enum';
 import { IUserData } from '../../core/interface';
 
+import { AddSongToPlaylistDto } from './dto/add-song-to-playlist.dto';
 import { CreatePlaylistDto } from './dto/create-playlist.dto';
 import { UpdatePlaylistDto } from './dto/update-playlist.dto';
 import { PlaylistsService } from './playlists.service';
@@ -39,7 +40,18 @@ export class PlaylistsController {
     return this.playlistsService.findOne(+id, user.uid);
   }
 
-  @Patch(':id')
+  @Post('/add-song')
+  addSongToPlaylist(
+    @UserData() user: IUserData,
+    @Body() addSongToPlaylistDto: AddSongToPlaylistDto,
+  ) {
+    return this.playlistsService.addSongToPlaylist(
+      addSongToPlaylistDto,
+      user.uid,
+    );
+  }
+
+  @Put(':id')
   update(
     @Param('id') id: string,
     @Body() updatePlaylistDto: UpdatePlaylistDto,

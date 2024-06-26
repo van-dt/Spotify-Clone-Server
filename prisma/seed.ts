@@ -1,6 +1,7 @@
 import { PrismaClient } from '@prisma/client';
 const prisma = new PrismaClient();
 async function main() {
+  await prisma.$executeRaw`CREATE EXTENSION IF NOT EXISTS unaccent;`;
   // const alice = await prisma.user.upsert({
   //   where: { email: 'alice@prisma.io' },
   //   update: {},

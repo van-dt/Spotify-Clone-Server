@@ -14,4 +14,9 @@ export class CreateAuthorDto {
   @IsString()
   @IsOptional()
   image?: string;
+
+  @ApiProperty({ type: String, required: false })
+  @IsString()
+  @IsOptional()
+  banner?: string;
 }

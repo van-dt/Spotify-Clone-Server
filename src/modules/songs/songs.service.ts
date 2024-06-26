@@ -36,6 +36,59 @@ export class SongsService {
   }
 
   async findAll(filter: FindAllPostFilterDto) {
+    if (filter.title) {
+      const searchQuery = `%${filter.title}%`;
+      const results: { id: number }[] = await this.prisma.$queryRaw`
+        SELECT
+          id
+        FROM
+          song
+        WHERE
+          unaccent(lower(title)) ILIKE unaccent(lower(${searchQuery}));
+      `;
+      const songIds = results.map((result) => result.id);
+      const songs = await this.prisma.song.findMany({
+        select: {
+          id: true,
+          title: true,
+          songPath: true,
+          imagePath: true,
+          author: {
+            select: {
+              authorName: true,
+            },
+          },
+          songCategories: {
+            select: {
+              category: {
+                select: {
+                  categoryName: true,
+                },
+              },
+            },
+          },
+          createdAt: true,
+          updatedAt: true,
+        },
+        where: {
+          id: {
+            in: songIds,
+          },
+        },
+        orderBy: {
+          createdAt: 'desc',
+        },
+      });
+
+      return songs.map((song) => {
+        const { songCategories, ...songRes } = song;
+        const categories = songCategories.map(
+          (songCategory) => songCategory.category.categoryName,
+        );
+        return { ...songRes, categories };
+      });
+    }
+
     const songs = await this.prisma.song.findMany({
       select: {
         id: true,
@@ -58,11 +111,6 @@ export class SongsService {
         },
         createdAt: true,
         updatedAt: true,
-      },
-      where: {
-        title: {
-          contains: filter.title,
-        },
       },
       orderBy: {
         createdAt: 'desc',
