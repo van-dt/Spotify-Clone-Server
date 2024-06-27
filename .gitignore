@@ -40,6 +40,7 @@ lerna-debug.log*
 static/files/
 
 .env
+.env.prod
 
 swagger.json
 
