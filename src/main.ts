@@ -54,7 +54,7 @@ async function bootstrap() {
 
   app.use(helmet());
   app.enableCors({
-    origin: ['*'],
+    origin: ['http://localhost:3000', 'https://music-player-system.vercel.app'],
     credentials: true,
   });
 
