@@ -6,18 +6,14 @@ import {
   HttpStatus,
   Logger,
 } from '@nestjs/common';
-import { I18nService } from 'nestjs-i18n';
 
-import { EAppLanguage, ErrorMessage } from '@core/enum';
+import { ErrorMessage } from '@core/enum';
 import { ConstanceService } from '@core/global/constance/constance.service';
 
 @Catch(HttpException)
 export class HttpExceptionFilter implements ExceptionFilter {
   private logger: Logger = new Logger('Exception');
-  constructor(
-    private readonly i18n: I18nService,
-    private constanceService: ConstanceService,
-  ) {}
+  constructor(private constanceService: ConstanceService) {}
 
   async catch(exception: unknown, host: ArgumentsHost) {
     const ctx = host.switchToHttp();
@@ -28,7 +24,7 @@ export class HttpExceptionFilter implements ExceptionFilter {
         ? exception.getStatus()
         : HttpStatus.INTERNAL_SERVER_ERROR;
 
-    let message =
+    const message =
       exception instanceof HttpException
         ? exception.getResponse()
         : HttpStatus.INTERNAL_SERVER_ERROR;
@@ -37,18 +33,10 @@ export class HttpExceptionFilter implements ExceptionFilter {
 
     if (typeof message === 'string') {
       errorCode = message.replace('error.', '');
-      message = await this.i18n.translate(message, {
-        lang: this.constanceService.getFallbackLanguage() || EAppLanguage.JA,
-      });
     }
 
     if (typeof message === 'object') {
       errorCode = ErrorMessage.INVALID_PARAM;
-      if (message[`statusCode`] === HttpStatus.NOT_ACCEPTABLE) {
-        message = await this.i18n.translate(ErrorMessage.INVALID_PARAM, {
-          lang: this.constanceService.getFallbackLanguage() || EAppLanguage.JA,
-        });
-      }
     }
 
     this.logger.log(`[Exception] - ${message[`message`]}`, message);

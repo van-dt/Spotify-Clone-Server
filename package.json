@@ -12,7 +12,7 @@
     "start": "nest start",
     "generate-swagger": "ts-node -r tsconfig-paths/register swagger-generator.ts",
     "start:debug": "nest start --debug --watch",
-    "start:prod": "node dist/main",
+    "start:prod": "node dist/src/main.js",
     "lint:typecheck": "tsc -p . --noEmit",
     "lint:typecheck:staged": "tsc -p . --noEmit && echo #",
     "lint:eslint": "NODE_OPTIONS='--max_old_space_size=5120' eslint .",

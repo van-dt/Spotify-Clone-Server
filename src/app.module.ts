@@ -17,7 +17,6 @@ import { JwtAuthGuard } from '@core/global/auth/guard/jwtAuth.guard';
 import { RolesGuard } from '@core/global/auth/guard/roles.guard';
 import { ConstanceModule } from '@core/global/constance/constance.module';
 import { EcsModule } from '@core/global/ecs/ecs.module';
-import { I18nCustomModule } from '@core/global/i18nCustom/i18nCustom.module';
 import { PrismaModule } from '@core/global/prisma/prisma.module';
 // import { QueueModule } from '@core/global/queue/queue.module';
 // import { QueueProcessorModule } from '@core/global/queueProcessor/queueProcessor.module';
@@ -55,7 +54,6 @@ import { UsersModule } from './modules/users/users.module';
     MulterModule.register({
       dest: './files',
     }),
-    I18nCustomModule,
     // RedisCacheModule,
     ConstanceModule,
     // QueueModule,
