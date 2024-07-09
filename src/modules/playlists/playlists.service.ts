@@ -1,5 +1,7 @@
 import {
   BadRequestException,
+  HttpException,
+  HttpStatus,
   Injectable,
   NotAcceptableException,
 } from '@nestjs/common';
@@ -172,8 +174,26 @@ export class PlaylistsService {
     });
   }
 
-  update(id: number, updatePlaylistDto: UpdatePlaylistDto) {
-    return `This action updates a #${id} playlist ${JSON.stringify(updatePlaylistDto)}`;
+  async update(
+    userId: number,
+    id: number,
+    updatePlaylistDto: UpdatePlaylistDto,
+  ) {
+    const playlistExist = await this.prisma.playlist.findFirstOrThrow({
+      where: { id },
+    });
+    if (userId !== playlistExist.userId) {
+      throw new HttpException(
+        `User can not update other user's profile`,
+        HttpStatus.FORBIDDEN,
+      );
+    }
+    return this.prisma.playlist.update({
+      where: {
+        id,
+      },
+      data: updatePlaylistDto,
+    });
   }
 
   remove(id: number) {

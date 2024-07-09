@@ -1,4 +1,6 @@
-import { Injectable } from '@nestjs/common';
+import * as fs from 'fs';
+
+import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 
 import { PrismaService } from '../../core/global/prisma/prisma.service';
 
@@ -191,7 +193,48 @@ export class SongsService {
     return `This action updates a #${id} song`;
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} song`;
+  async remove(id: number, userId: number) {
+    const songExist = await this.prisma.song.findFirstOrThrow({
+      where: {
+        id,
+      },
+    });
+
+    if (userId !== songExist.userId) {
+      throw new HttpException(
+        `User can not delete other user's song`,
+        HttpStatus.FORBIDDEN,
+      );
+    }
+
+    const fileSongPath = songExist.songPath.replace(
+      '/upload/song/',
+      'files/songs/',
+    );
+    fs.unlink(fileSongPath, (err) => {
+      if (err) {
+        console.error(`${JSON.stringify(err)}`);
+        throw new HttpException(
+          'Song file deleted error',
+          HttpStatus.BAD_REQUEST,
+        );
+      }
+    });
+
+    const fileImagePath = songExist.imagePath.replace(
+      '/upload/image/',
+      'files/images/',
+    );
+    fs.unlink(fileImagePath, (err) => {
+      if (err) {
+        console.error(`${JSON.stringify(err)}`);
+        throw new HttpException(
+          'Image file deleted error',
+          HttpStatus.BAD_REQUEST,
+        );
+      }
+    });
+
+    return this.prisma.song.delete({ where: { id } });
   }
 }

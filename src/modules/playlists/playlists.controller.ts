@@ -53,10 +53,11 @@ export class PlaylistsController {
 
   @Put(':id')
   update(
+    @UserData() user: IUserData,
     @Param('id') id: string,
     @Body() updatePlaylistDto: UpdatePlaylistDto,
   ) {
-    return this.playlistsService.update(+id, updatePlaylistDto);
+    return this.playlistsService.update(user.uid, +id, updatePlaylistDto);
   }
 
   @Delete(':id')

@@ -3,9 +3,9 @@ import {
   Get,
   Post,
   Body,
-  Patch,
   Param,
   Delete,
+  Put,
 } from '@nestjs/common';
 
 import { Roles, UserData } from '../../core/decorator';
@@ -45,9 +45,13 @@ export class UsersController {
   }
 
   @Roles([ERole.USER])
-  @Patch(':id')
-  update(@Param('id') id: string, @Body() updateUserDto: UpdateUserDto) {
-    return this.usersService.update(+id, updateUserDto);
+  @Put(':id')
+  update(
+    @UserData() user: IUserData,
+    @Param('id') id: string,
+    @Body() updateUserDto: UpdateUserDto,
+  ) {
+    return this.usersService.update(user.uid, +id, updateUserDto);
   }
 
   @Roles([ERole.USER])

@@ -60,8 +60,9 @@ export class SongsController {
     return this.songsService.update(+id, updateSongDto);
   }
 
+  @Roles([ERole.USER])
   @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.songsService.remove(+id);
+  remove(@UserData() user: IUserData, @Param('id') id: string) {
+    return this.songsService.remove(+id, user.uid);
   }
 }

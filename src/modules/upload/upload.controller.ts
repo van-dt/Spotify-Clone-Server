@@ -64,7 +64,7 @@ export class UploadController {
   }
 
   @Get('/song/:songPath')
-  seeUploadedAudioFile(@Param('songPath') image, @Res() res) {
-    return res.sendFile(image, { root: './files/songs' });
+  seeUploadedAudioFile(@Param('songPath') song, @Res() res) {
+    return res.sendFile(song, { root: './files/songs' });
   }
 }

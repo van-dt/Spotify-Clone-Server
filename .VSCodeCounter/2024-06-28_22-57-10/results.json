@@ -1,0 +1,1028 @@
+{
+  "file:///d%3A/project/DATN/spotify-clone/server/tsconfig.json": {
+    "language": "JSON with Comments",
+    "code": 28,
+    "comment": 0,
+    "blank": 1
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/.prettierrc": {
+    "language": "JSON",
+    "code": 4,
+    "comment": 0,
+    "blank": 1
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/.lintstagedrc.yml": {
+    "language": "YAML",
+    "code": 7,
+    "comment": 0,
+    "blank": 1
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/.prettierignore": {
+    "language": "Ignore",
+    "code": 2,
+    "comment": 0,
+    "blank": 1
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/tsconfig.build.json": {
+    "language": "JSON",
+    "code": 11,
+    "comment": 0,
+    "blank": 1
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/test/jest-e2e.json": {
+    "language": "JSON",
+    "code": 9,
+    "comment": 0,
+    "blank": 1
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/swagger-generator.ts": {
+    "language": "TypeScript",
+    "code": 17,
+    "comment": 0,
+    "blank": 5
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/ssl.md": {
+    "language": "Markdown",
+    "code": 6,
+    "comment": 0,
+    "blank": 1
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/app.controller.ts": {
+    "language": "TypeScript",
+    "code": 19,
+    "comment": 6,
+    "blank": 7
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/app.module.ts": {
+    "language": "TypeScript",
+    "code": 111,
+    "comment": 12,
+    "blank": 4
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/prisma/reset.prisma": {
+    "language": "Prisma",
+    "code": 10,
+    "comment": 1,
+    "blank": 3
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/test/app.e2e-spec.ts": {
+    "language": "TypeScript",
+    "code": 20,
+    "comment": 0,
+    "blank": 5
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/prisma/migrations/20240522091728_update_banner/migration.sql": {
+    "language": "SQL",
+    "code": 4,
+    "comment": 4,
+    "blank": 4
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/helper/logger.middleware.ts": {
+    "language": "TypeScript",
+    "code": 12,
+    "comment": 0,
+    "blank": 3
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/modules/users/users.service.spec.ts": {
+    "language": "TypeScript",
+    "code": 14,
+    "comment": 0,
+    "blank": 6
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/app.service.ts": {
+    "language": "TypeScript",
+    "code": 34,
+    "comment": 32,
+    "blank": 8
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/modules/users/users.module.ts": {
+    "language": "TypeScript",
+    "code": 8,
+    "comment": 0,
+    "blank": 3
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/modules/users/users.controller.ts": {
+    "language": "TypeScript",
+    "code": 49,
+    "comment": 0,
+    "blank": 10
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/modules/categories/categories.module.ts": {
+    "language": "TypeScript",
+    "code": 8,
+    "comment": 0,
+    "blank": 3
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/modules/users/users.controller.spec.ts": {
+    "language": "TypeScript",
+    "code": 16,
+    "comment": 0,
+    "blank": 6
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/prisma/schema.prisma": {
+    "language": "Prisma",
+    "code": 108,
+    "comment": 4,
+    "blank": 22
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/prisma/seed.ts": {
+    "language": "TypeScript",
+    "code": 14,
+    "comment": 38,
+    "blank": 2
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/modules/playlists/playlists.controller.spec.ts": {
+    "language": "TypeScript",
+    "code": 16,
+    "comment": 0,
+    "blank": 6
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/modules/users/users.service.ts": {
+    "language": "TypeScript",
+    "code": 37,
+    "comment": 0,
+    "blank": 10
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/modules/categories/categories.controller.ts": {
+    "language": "TypeScript",
+    "code": 30,
+    "comment": 0,
+    "blank": 8
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/modules/categories/categories.controller.spec.ts": {
+    "language": "TypeScript",
+    "code": 16,
+    "comment": 0,
+    "blank": 6
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/modules/playlists/playlists.service.spec.ts": {
+    "language": "TypeScript",
+    "code": 14,
+    "comment": 0,
+    "blank": 6
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/modules/playlists/dto/add-song-to-playlist.dto.ts": {
+    "language": "TypeScript",
+    "code": 12,
+    "comment": 0,
+    "blank": 3
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/modules/users/dto/update-user.dto.ts": {
+    "language": "TypeScript",
+    "code": 3,
+    "comment": 0,
+    "blank": 3
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/modules/users/dto/create-user.dto.ts": {
+    "language": "TypeScript",
+    "code": 1,
+    "comment": 0,
+    "blank": 1
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/modules/playlists/playlists.module.ts": {
+    "language": "TypeScript",
+    "code": 8,
+    "comment": 0,
+    "blank": 3
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/modules/playlists/playlists.controller.ts": {
+    "language": "TypeScript",
+    "code": 57,
+    "comment": 0,
+    "blank": 10
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/modules/playlists/dto/create-playlist.dto.ts": {
+    "language": "TypeScript",
+    "code": 18,
+    "comment": 0,
+    "blank": 5
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/modules/webhook/webhook.controller.ts": {
+    "language": "TypeScript",
+    "code": 13,
+    "comment": 0,
+    "blank": 5
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/modules/playlists/playlists.service.ts": {
+    "language": "TypeScript",
+    "code": 167,
+    "comment": 0,
+    "blank": 16
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/modules/playlists/dto/update-playlist.dto.ts": {
+    "language": "TypeScript",
+    "code": 3,
+    "comment": 0,
+    "blank": 3
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/helper/validation.pipe.ts": {
+    "language": "TypeScript",
+    "code": 33,
+    "comment": 2,
+    "blank": 3
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/helper/utils.ts": {
+    "language": "TypeScript",
+    "code": 169,
+    "comment": 8,
+    "blank": 26
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/helper/sendgrid.ts": {
+    "language": "TypeScript",
+    "code": 36,
+    "comment": 0,
+    "blank": 8
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/modules/songs/songs.controller.spec.ts": {
+    "language": "TypeScript",
+    "code": 16,
+    "comment": 0,
+    "blank": 6
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/modules/songs/songs.controller.ts": {
+    "language": "TypeScript",
+    "code": 57,
+    "comment": 0,
+    "blank": 11
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/helper/nodemailer.ts": {
+    "language": "TypeScript",
+    "code": 38,
+    "comment": 1,
+    "blank": 9
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/modules/songs/songs.module.ts": {
+    "language": "TypeScript",
+    "code": 8,
+    "comment": 0,
+    "blank": 3
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/modules/categories/categories.service.ts": {
+    "language": "TypeScript",
+    "code": 80,
+    "comment": 0,
+    "blank": 9
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/modules/example/example.module.ts": {
+    "language": "TypeScript",
+    "code": 8,
+    "comment": 0,
+    "blank": 3
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/modules/example/example.service.ts": {
+    "language": "TypeScript",
+    "code": 56,
+    "comment": 0,
+    "blank": 9
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/modules/example/example.controller.ts": {
+    "language": "TypeScript",
+    "code": 81,
+    "comment": 0,
+    "blank": 10
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/modules/song-like/song-like.module.ts": {
+    "language": "TypeScript",
+    "code": 8,
+    "comment": 0,
+    "blank": 3
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/modules/song-like/song-like.service.spec.ts": {
+    "language": "TypeScript",
+    "code": 14,
+    "comment": 0,
+    "blank": 6
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/modules/webhook/webhook.service.ts": {
+    "language": "TypeScript",
+    "code": 10,
+    "comment": 0,
+    "blank": 4
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/modules/songs/dto/update-song.dto.ts": {
+    "language": "TypeScript",
+    "code": 3,
+    "comment": 0,
+    "blank": 3
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/modules/song-like/song-like.service.ts": {
+    "language": "TypeScript",
+    "code": 57,
+    "comment": 0,
+    "blank": 10
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/modules/categories/categories.service.spec.ts": {
+    "language": "TypeScript",
+    "code": 14,
+    "comment": 0,
+    "blank": 6
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/modules/song-like/song-like.controller.ts": {
+    "language": "TypeScript",
+    "code": 36,
+    "comment": 0,
+    "blank": 9
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/modules/song-like/song-like.controller.spec.ts": {
+    "language": "TypeScript",
+    "code": 16,
+    "comment": 0,
+    "blank": 6
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/modules/songs/dto/find-song.dto.ts": {
+    "language": "TypeScript",
+    "code": 16,
+    "comment": 0,
+    "blank": 3
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/modules/songs/dto/create-song.dto.ts": {
+    "language": "TypeScript",
+    "code": 33,
+    "comment": 0,
+    "blank": 7
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/modules/webhook/webhook.module.ts": {
+    "language": "TypeScript",
+    "code": 10,
+    "comment": 0,
+    "blank": 4
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/modules/songs/songs.service.spec.ts": {
+    "language": "TypeScript",
+    "code": 14,
+    "comment": 0,
+    "blank": 6
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/modules/songs/songs.service.ts": {
+    "language": "TypeScript",
+    "code": 180,
+    "comment": 0,
+    "blank": 18
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/helper/httpException.filter.ts": {
+    "language": "TypeScript",
+    "code": 45,
+    "comment": 3,
+    "blank": 11
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/modules/song-like/entities/song-like.entity.ts": {
+    "language": "TypeScript",
+    "code": 1,
+    "comment": 0,
+    "blank": 1
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/modules/song-like/dto/update-song-like.dto.ts": {
+    "language": "TypeScript",
+    "code": 3,
+    "comment": 0,
+    "blank": 3
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/modules/example/dto/updateExample.dto.ts": {
+    "language": "TypeScript",
+    "code": 23,
+    "comment": 0,
+    "blank": 6
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/modules/song-like/dto/create-song-like.dto.ts": {
+    "language": "TypeScript",
+    "code": 8,
+    "comment": 0,
+    "blank": 2
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/modules/example/dto/createExample.dto.ts": {
+    "language": "TypeScript",
+    "code": 73,
+    "comment": 0,
+    "blank": 14
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/helper/env.validation.ts": {
+    "language": "TypeScript",
+    "code": 47,
+    "comment": 0,
+    "blank": 16
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/main.ts": {
+    "language": "TypeScript",
+    "code": 64,
+    "comment": 2,
+    "blank": 14
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/modules/categories/dto/create-category.dto.ts": {
+    "language": "TypeScript",
+    "code": 18,
+    "comment": 0,
+    "blank": 5
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/prisma/migrations/20240321163036_change_name_user_id/migration.sql": {
+    "language": "SQL",
+    "code": 4,
+    "comment": 10,
+    "blank": 3
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/modules/author-like/author-like.module.ts": {
+    "language": "TypeScript",
+    "code": 8,
+    "comment": 0,
+    "blank": 3
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/modules/author-like/author-like.service.spec.ts": {
+    "language": "TypeScript",
+    "code": 14,
+    "comment": 0,
+    "blank": 6
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/modules/author-like/author-like.controller.ts": {
+    "language": "TypeScript",
+    "code": 39,
+    "comment": 0,
+    "blank": 9
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/modules/upload/upload.controller.spec.ts": {
+    "language": "TypeScript",
+    "code": 16,
+    "comment": 0,
+    "blank": 6
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/modules/author-like/author-like.controller.spec.ts": {
+    "language": "TypeScript",
+    "code": 16,
+    "comment": 0,
+    "blank": 6
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/modules/author/author.service.spec.ts": {
+    "language": "TypeScript",
+    "code": 14,
+    "comment": 0,
+    "blank": 6
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/modules/categories/dto/update-category.dto.ts": {
+    "language": "TypeScript",
+    "code": 3,
+    "comment": 0,
+    "blank": 3
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/modules/author/author.service.ts": {
+    "language": "TypeScript",
+    "code": 75,
+    "comment": 0,
+    "blank": 8
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/core/constant/index.ts": {
+    "language": "TypeScript",
+    "code": 26,
+    "comment": 2,
+    "blank": 1
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/modules/author/author.controller.spec.ts": {
+    "language": "TypeScript",
+    "code": 16,
+    "comment": 0,
+    "blank": 6
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/modules/author/author.module.ts": {
+    "language": "TypeScript",
+    "code": 8,
+    "comment": 0,
+    "blank": 3
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/core/config/configuration.config.ts": {
+    "language": "TypeScript",
+    "code": 103,
+    "comment": 0,
+    "blank": 11
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/modules/author/author.controller.ts": {
+    "language": "TypeScript",
+    "code": 26,
+    "comment": 0,
+    "blank": 7
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/modules/upload/upload.service.ts": {
+    "language": "TypeScript",
+    "code": 21,
+    "comment": 0,
+    "blank": 7
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/prisma/migrations/20240518161238_change_playlist_relation/migration.sql": {
+    "language": "SQL",
+    "code": 18,
+    "comment": 16,
+    "blank": 11
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/modules/upload/upload.service.spec.ts": {
+    "language": "TypeScript",
+    "code": 14,
+    "comment": 0,
+    "blank": 6
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/core/interface/default.interface.ts": {
+    "language": "TypeScript",
+    "code": 62,
+    "comment": 0,
+    "blank": 9
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/core/interface/index.ts": {
+    "language": "TypeScript",
+    "code": 1,
+    "comment": 0,
+    "blank": 1
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/modules/categories/dto/find-category.dto.ts": {
+    "language": "TypeScript",
+    "code": 16,
+    "comment": 0,
+    "blank": 3
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/core/swagger/index.ts": {
+    "language": "TypeScript",
+    "code": 21,
+    "comment": 0,
+    "blank": 3
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/modules/upload/upload.module.ts": {
+    "language": "TypeScript",
+    "code": 8,
+    "comment": 0,
+    "blank": 3
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/core/config/index.ts": {
+    "language": "TypeScript",
+    "code": 1,
+    "comment": 0,
+    "blank": 1
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/modules/author-like/author-like.service.ts": {
+    "language": "TypeScript",
+    "code": 59,
+    "comment": 0,
+    "blank": 10
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/prisma/migrations/20240516182159_change_name_table/migration.sql": {
+    "language": "SQL",
+    "code": 41,
+    "comment": 27,
+    "blank": 22
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/modules/upload/dto/create-upload.dto.ts": {
+    "language": "TypeScript",
+    "code": 3,
+    "comment": 0,
+    "blank": 1
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/modules/author-like/dto/update-author-like.dto.ts": {
+    "language": "TypeScript",
+    "code": 3,
+    "comment": 0,
+    "blank": 3
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/modules/upload/upload.controller.ts": {
+    "language": "TypeScript",
+    "code": 63,
+    "comment": 0,
+    "blank": 8
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/modules/author/dto/update-author.dto.ts": {
+    "language": "TypeScript",
+    "code": 3,
+    "comment": 0,
+    "blank": 3
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/modules/example/swagger/output/createExample.response.ts": {
+    "language": "TypeScript",
+    "code": 7,
+    "comment": 0,
+    "blank": 4
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/modules/upload/dto/update-upload.dto.ts": {
+    "language": "TypeScript",
+    "code": 3,
+    "comment": 0,
+    "blank": 3
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/core/swagger/dto/index.swagger.ts": {
+    "language": "TypeScript",
+    "code": 7,
+    "comment": 0,
+    "blank": 3
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/modules/author-like/dto/create-author-like.dto.ts": {
+    "language": "TypeScript",
+    "code": 8,
+    "comment": 0,
+    "blank": 2
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/modules/example/swagger/output/getExamples.response.ts": {
+    "language": "TypeScript",
+    "code": 19,
+    "comment": 0,
+    "blank": 6
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/modules/author/dto/create-author.dto.ts": {
+    "language": "TypeScript",
+    "code": 18,
+    "comment": 0,
+    "blank": 5
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/prisma/migrations/20240518112024_change_name_playlist/migration.sql": {
+    "language": "SQL",
+    "code": 4,
+    "comment": 11,
+    "blank": 3
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/modules/author/dto/find-author.dto.ts": {
+    "language": "TypeScript",
+    "code": 16,
+    "comment": 0,
+    "blank": 3
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/prisma/migrations/20240516181334_add_author_category/migration.sql": {
+    "language": "SQL",
+    "code": 56,
+    "comment": 33,
+    "blank": 24
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/core/global/ses/ses.module.ts": {
+    "language": "TypeScript",
+    "code": 8,
+    "comment": 0,
+    "blank": 3
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/core/guard/base.guard.ts": {
+    "language": "TypeScript",
+    "code": 11,
+    "comment": 0,
+    "blank": 5
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/core/enum/index.ts": {
+    "language": "TypeScript",
+    "code": 2,
+    "comment": 0,
+    "blank": 1
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/core/global/ses/ses.service.ts": {
+    "language": "TypeScript",
+    "code": 360,
+    "comment": 5,
+    "blank": 41
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/core/global/constance/constance.module.ts": {
+    "language": "TypeScript",
+    "code": 8,
+    "comment": 0,
+    "blank": 3
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/core/guard/disable.guard.ts": {
+    "language": "TypeScript",
+    "code": 20,
+    "comment": 0,
+    "blank": 5
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/core/enum/error.enum.ts": {
+    "language": "TypeScript",
+    "code": 88,
+    "comment": 0,
+    "blank": 1
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/core/guard/index.ts": {
+    "language": "TypeScript",
+    "code": 2,
+    "comment": 0,
+    "blank": 1
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/core/enum/default.enum.ts": {
+    "language": "TypeScript",
+    "code": 315,
+    "comment": 3,
+    "blank": 46
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/core/global/constance/constance.service.ts": {
+    "language": "TypeScript",
+    "code": 36,
+    "comment": 1,
+    "blank": 7
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/core/guard/role.guard.ts": {
+    "language": "TypeScript",
+    "code": 52,
+    "comment": 8,
+    "blank": 10
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/core/global/queueProcessor/queueProcessor.service.ts": {
+    "language": "TypeScript",
+    "code": 57,
+    "comment": 0,
+    "blank": 17
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/core/global/queue/queue.module.ts": {
+    "language": "TypeScript",
+    "code": 20,
+    "comment": 0,
+    "blank": 3
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/core/global/queueProcessor/queueProcessor.module.ts": {
+    "language": "TypeScript",
+    "code": 16,
+    "comment": 1,
+    "blank": 3
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/core/global/queueProcessor/queueIdentity.constant.ts": {
+    "language": "TypeScript",
+    "code": 12,
+    "comment": 15,
+    "blank": 6
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/core/swagger/response/index.response.ts": {
+    "language": "TypeScript",
+    "code": 71,
+    "comment": 0,
+    "blank": 21
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/core/global/prisma/prisma.module.ts": {
+    "language": "TypeScript",
+    "code": 8,
+    "comment": 0,
+    "blank": 3
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/core/global/ses/dto/ses-webhook.dto.ts": {
+    "language": "TypeScript",
+    "code": 17,
+    "comment": 0,
+    "blank": 4
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/core/global/prisma/prisma.service.ts": {
+    "language": "TypeScript",
+    "code": 46,
+    "comment": 0,
+    "blank": 5
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/core/global/redis/redis.service.ts": {
+    "language": "TypeScript",
+    "code": 19,
+    "comment": 0,
+    "blank": 6
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/core/global/redis/redis.module.ts": {
+    "language": "TypeScript",
+    "code": 39,
+    "comment": 1,
+    "blank": 8
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/core/global/ecs/ecs.module.ts": {
+    "language": "TypeScript",
+    "code": 8,
+    "comment": 0,
+    "blank": 3
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/core/interceptor/response.interceptor.ts": {
+    "language": "TypeScript",
+    "code": 34,
+    "comment": 0,
+    "blank": 3
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/core/decorator/disable.decorator.ts": {
+    "language": "TypeScript",
+    "code": 2,
+    "comment": 0,
+    "blank": 2
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/core/global/ecs/ecs.service.ts": {
+    "language": "TypeScript",
+    "code": 54,
+    "comment": 1,
+    "blank": 15
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/core/decorator/index.ts": {
+    "language": "TypeScript",
+    "code": 6,
+    "comment": 0,
+    "blank": 1
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/core/global/queueProcessor/consumer/sendMailTempleUpdateEvent.processor.ts": {
+    "language": "TypeScript",
+    "code": 38,
+    "comment": 0,
+    "blank": 11
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/core/decorator/public.decorator.ts": {
+    "language": "TypeScript",
+    "code": 3,
+    "comment": 0,
+    "blank": 2
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/core/interceptor/post.interceptor.ts": {
+    "language": "TypeScript",
+    "code": 28,
+    "comment": 0,
+    "blank": 4
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/core/global/auth/auth.controller.ts": {
+    "language": "TypeScript",
+    "code": 49,
+    "comment": 0,
+    "blank": 7
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/core/global/i18nCustom/i18nCustom.module.ts": {
+    "language": "TypeScript",
+    "code": 28,
+    "comment": 0,
+    "blank": 3
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/core/decorator/guardResponse.decorator.ts": {
+    "language": "TypeScript",
+    "code": 8,
+    "comment": 0,
+    "blank": 3
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/core/interceptor/index.ts": {
+    "language": "TypeScript",
+    "code": 2,
+    "comment": 0,
+    "blank": 1
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/core/global/i18nCustom/i18nCustom.service.ts": {
+    "language": "TypeScript",
+    "code": 16,
+    "comment": 1,
+    "blank": 4
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/core/global/auth/auth.module.ts": {
+    "language": "TypeScript",
+    "code": 28,
+    "comment": 1,
+    "blank": 4
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/core/decorator/queryPaging.decorator.ts": {
+    "language": "TypeScript",
+    "code": 8,
+    "comment": 0,
+    "blank": 3
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/package.json": {
+    "language": "JSON",
+    "code": 159,
+    "comment": 0,
+    "blank": 1
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/core/decorator/requestHeader.decorator.ts": {
+    "language": "TypeScript",
+    "code": 27,
+    "comment": 0,
+    "blank": 6
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/core/global/auth/auth.service.ts": {
+    "language": "TypeScript",
+    "code": 104,
+    "comment": 0,
+    "blank": 21
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/prisma/migrations/20240319070551_init/migration.sql": {
+    "language": "SQL",
+    "code": 29,
+    "comment": 8,
+    "blank": 11
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/README.md": {
+    "language": "Markdown",
+    "code": 252,
+    "comment": 0,
+    "blank": 54
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/core/decorator/user.decorator.ts": {
+    "language": "TypeScript",
+    "code": 8,
+    "comment": 0,
+    "blank": 2
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/core/decorator/roles.decorator.ts": {
+    "language": "TypeScript",
+    "code": 4,
+    "comment": 0,
+    "blank": 3
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/prisma/migrations/20240319070729_change_name_table/migration.sql": {
+    "language": "SQL",
+    "code": 28,
+    "comment": 18,
+    "blank": 13
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/core/global/auth/strategy/jwt.strategy.ts": {
+    "language": "TypeScript",
+    "code": 33,
+    "comment": 9,
+    "blank": 10
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/nest-cli.json": {
+    "language": "JSON",
+    "code": 8,
+    "comment": 0,
+    "blank": 1
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/prisma/migrations/20240319082851_change_fullname/migration.sql": {
+    "language": "SQL",
+    "code": 2,
+    "comment": 8,
+    "blank": 1
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/core/global/auth/interface/auth.interface.ts": {
+    "language": "TypeScript",
+    "code": 26,
+    "comment": 3,
+    "blank": 4
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/.eslintrc.yml": {
+    "language": "YAML",
+    "code": 70,
+    "comment": 0,
+    "blank": 1
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/Dockerfile": {
+    "language": "Docker",
+    "code": 14,
+    "comment": 3,
+    "blank": 8
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/core/global/auth/interface/index.ts": {
+    "language": "TypeScript",
+    "code": 1,
+    "comment": 0,
+    "blank": 1
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/core/global/auth/guard/jwtAuth.guard.ts": {
+    "language": "TypeScript",
+    "code": 41,
+    "comment": 4,
+    "blank": 11
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/.dockerignore": {
+    "language": "Ignore",
+    "code": 11,
+    "comment": 1,
+    "blank": 2
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/core/global/auth/guard/roles.guard.ts": {
+    "language": "TypeScript",
+    "code": 27,
+    "comment": 1,
+    "blank": 6
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/modules/example/swagger/input/getExample.response.ts": {
+    "language": "TypeScript",
+    "code": 6,
+    "comment": 0,
+    "blank": 3
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/core/global/auth/dto/index.ts": {
+    "language": "TypeScript",
+    "code": 2,
+    "comment": 0,
+    "blank": 1
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/docker-compose.yml": {
+    "language": "YAML",
+    "code": 12,
+    "comment": 0,
+    "blank": 1
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/core/global/auth/dto/systemLogin.dto.ts": {
+    "language": "TypeScript",
+    "code": 16,
+    "comment": 0,
+    "blank": 4
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/core/global/auth/dto/systemSignUp.dto.ts": {
+    "language": "TypeScript",
+    "code": 35,
+    "comment": 0,
+    "blank": 6
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/i18n/ja/error.json": {
+    "language": "JSON",
+    "code": 73,
+    "comment": 0,
+    "blank": 1
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/core/global/auth/swagger/output/profile.response.ts": {
+    "language": "TypeScript",
+    "code": 99,
+    "comment": 0,
+    "blank": 26
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/core/global/auth/swagger/output/systemLogin.response.ts": {
+    "language": "TypeScript",
+    "code": 10,
+    "comment": 0,
+    "blank": 3
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/i18n/en/error.json": {
+    "language": "JSON",
+    "code": 64,
+    "comment": 0,
+    "blank": 1
+  },
+  "file:///d%3A/project/DATN/spotify-clone/server/src/core/global/auth/swagger/output/systemSignUp.response.ts": {
+    "language": "TypeScript",
+    "code": 6,
+    "comment": 0,
+    "blank": 3
+  }
+}

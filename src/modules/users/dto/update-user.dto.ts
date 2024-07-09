@@ -1,5 +1,23 @@
-import { PartialType } from '@nestjs/mapped-types';
+import { ApiProperty } from '@nestjs/swagger';
+import { IsOptional, IsString, MaxLength } from 'class-validator';
 
-import { CreateUserDto } from './create-user.dto';
+import { ErrorMessage } from '../../../core/enum';
 
-export class UpdateUserDto extends PartialType(CreateUserDto) {}
+export class UpdateUserDto {
+  @ApiProperty({ type: String })
+  @IsString()
+  @IsOptional()
+  @MaxLength(255, { message: ErrorMessage.MAX_LENGTH_255 })
+  fullName?: string;
+
+  @ApiProperty({ type: String })
+  @IsString()
+  @IsOptional()
+  avatarUrl?: string;
+
+  @ApiProperty({ type: String })
+  @IsString()
+  @IsOptional()
+  @MaxLength(255, { message: ErrorMessage.MAX_LENGTH_255 })
+  bio?: string;
+}

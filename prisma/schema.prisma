@@ -21,6 +21,7 @@ model User {
   id          Int           @id @default(autoincrement())
   email       String        @unique
   fullName    String        @map("full_name")
+  bio         String?       @map("bio")
   avatarUrl   String?       @map("avatar_url")
   password    String
   role        Role          @default(USER)

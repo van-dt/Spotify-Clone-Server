@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 
 import { PrismaService } from '../../core/global/prisma/prisma.service';
 
@@ -32,12 +32,34 @@ export class UsersService {
     return user;
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} user`;
+  async findOne(id: number) {
+    const user = await this.prisma.user.findFirstOrThrow({
+      where: {
+        id,
+      },
+      select: {
+        id: true,
+        fullName: true,
+        email: true,
+        avatarUrl: true,
+      },
+    });
+    return user;
   }
 
-  update(id: number, _updateUserDto: UpdateUserDto) {
-    return `This action updates a #${id} user`;
+  update(currentUserId: number, id: number, updateUserDto: UpdateUserDto) {
+    if (currentUserId !== id) {
+      throw new HttpException(
+        `User can not update other user's profile`,
+        HttpStatus.FORBIDDEN,
+      );
+    }
+    return this.prisma.user.update({
+      where: {
+        id,
+      },
+      data: updateUserDto,
+    });
   }
 
   remove(id: number) {
