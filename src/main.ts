@@ -52,9 +52,17 @@ async function bootstrap() {
     SwaggerModule.setup('openapi', app, document);
   }
 
-  app.use(helmet());
+  app.use(
+    helmet({
+      crossOriginResourcePolicy: false,
+    }),
+  );
   app.enableCors({
-    origin: ['http://localhost:3000', 'https://music-player-system.vercel.app'],
+    origin: [
+      'http://localhost:3000',
+      'https://music-player-system.vercel.app',
+      'http://localhost:5500',
+    ],
     credentials: true,
   });
 
