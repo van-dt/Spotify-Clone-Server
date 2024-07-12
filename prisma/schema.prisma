@@ -41,9 +41,9 @@ model Song {
   songPath       String         @map("song_path")
   imagePath      String?        @map("image_path")
   listenCount    Int            @default(0) @map("listen_count")
-  user           User           @relation(fields: [userId], references: [id])
+  user           User           @relation(fields: [userId], references: [id], onDelete: Cascade)
   userId         Int            @map("user_id")
-  author         Author         @relation(fields: [authorId], references: [id])
+  author         Author         @relation(fields: [authorId], references: [id], onDelete: Cascade)
   authorId       Int            @map("author_id")
   createdAt      DateTime       @default(now()) @map("created_at")
   updatedAt      DateTime       @default(now()) @map("updated_at")
@@ -56,9 +56,9 @@ model Song {
 
 model LikedSong {
   userId Int  @map("user_id")
-  user   User @relation(fields: [userId], references: [id])
+  user   User @relation(fields: [userId], references: [id], onDelete: Cascade)
   songId Int  @map("song_id")
-  song   Song @relation(fields: [songId], references: [id])
+  song   Song @relation(fields: [songId], references: [id], onDelete: Cascade)
 
   @@id([userId, songId])
   @@map("liked_song")
@@ -78,9 +78,9 @@ model Category {
 
 model SongCategory {
   songId     Int      @map("song_id")
-  song       Song     @relation(fields: [songId], references: [id])
+  song       Song     @relation(fields: [songId], references: [id], onDelete: Cascade)
   categoryId Int      @map("category_id")
-  category   Category @relation(fields: [categoryId], references: [id])
+  category   Category @relation(fields: [categoryId], references: [id], onDelete: Cascade)
 
   @@id([songId, categoryId])
   @@map("song_category")
@@ -101,9 +101,9 @@ model Author {
 
 model LikedAuthor {
   userId   Int    @map("user_id")
-  user     User   @relation(fields: [userId], references: [id])
+  user     User   @relation(fields: [userId], references: [id], onDelete: Cascade)
   authorId Int    @map("author_id")
-  author   Author @relation(fields: [authorId], references: [id])
+  author   Author @relation(fields: [authorId], references: [id], onDelete: Cascade)
 
   @@id([userId, authorId])
   @@map("liked_author")
@@ -117,7 +117,7 @@ model Playlist {
   createdAt     DateTime       @default(now()) @map("created_at")
   updatedAt     DateTime       @default(now()) @map("updated_at")
   userId        Int
-  user          User           @relation(fields: [userId], references: [id])
+  user          User           @relation(fields: [userId], references: [id], onDelete: Cascade)
   songPlaylists SongPlaylist[]
 
   @@map("playlist")
@@ -125,9 +125,9 @@ model Playlist {
 
 model SongPlaylist {
   songId     Int      @map("song_id")
-  song       Song     @relation(fields: [songId], references: [id])
+  song       Song     @relation(fields: [songId], references: [id], onDelete: Cascade)
   playlistId Int      @map("playlist_id")
-  playlist   Playlist @relation(fields: [playlistId], references: [id])
+  playlist   Playlist @relation(fields: [playlistId], references: [id], onDelete: Cascade)
 
   @@id([songId, playlistId])
   @@map("song_playlist")

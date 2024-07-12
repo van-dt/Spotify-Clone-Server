@@ -1,3 +1,5 @@
+import * as fs from 'fs';
+
 import {
   BadRequestException,
   HttpException,
@@ -187,6 +189,47 @@ export class PlaylistsService {
         `User can not update other user's profile`,
         HttpStatus.FORBIDDEN,
       );
+    }
+    updatePlaylistDto.image = updatePlaylistDto.image || playlistExist.image;
+    updatePlaylistDto.banner = updatePlaylistDto.banner || playlistExist.banner;
+
+    if (
+      updatePlaylistDto.image &&
+      updatePlaylistDto.image !== playlistExist.image &&
+      playlistExist.image
+    ) {
+      const fileImagePath = playlistExist.image.replace(
+        '/upload/image/',
+        'files/images/',
+      );
+      fs.unlink(fileImagePath, (err) => {
+        if (err) {
+          console.error(`${JSON.stringify(err)}`);
+          throw new HttpException(
+            'Image file deleted error',
+            HttpStatus.BAD_REQUEST,
+          );
+        }
+      });
+    }
+    if (
+      updatePlaylistDto.banner &&
+      updatePlaylistDto.banner !== playlistExist.banner &&
+      playlistExist.banner
+    ) {
+      const fileImagePath = playlistExist.banner.replace(
+        '/upload/image/',
+        'files/images/',
+      );
+      fs.unlink(fileImagePath, (err) => {
+        if (err) {
+          console.error(`${JSON.stringify(err)}`);
+          throw new HttpException(
+            'Image file deleted error',
+            HttpStatus.BAD_REQUEST,
+          );
+        }
+      });
     }
     return this.prisma.playlist.update({
       where: {
